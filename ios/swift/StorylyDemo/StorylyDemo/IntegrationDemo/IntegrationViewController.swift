@@ -9,7 +9,7 @@
 import UIKit
 import Storyly
 
-let STORYLY_DEMO_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjU1NiwiYXBwX2lkIjoxMzg5LCJpbnNfaWQiOjEwNDA5fQ.kXqBdpUcKaJe7eA98PqHahMDf-123Uhb82t_mYzbBUM"
+let STORYLY_DEMO_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjEyODIsImFwcF9pZCI6MTE3NzAsImluc19pZCI6MTI2MTB9.RXVLrNPcF1e6F10gzEdvkHf2NWVDkAvqoXjfmcp71ZQ"
 
 class IntegrationViewController: UIViewController {
 
@@ -17,7 +17,8 @@ class IntegrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(openDeepLinkStoryItem(notification:)), name: .OpenStorylyItem, object: nil)
+
         storylyView.storylyInit = StorylyInit(storylyId: STORYLY_DEMO_TOKEN)
         storylyView.rootViewController = self
         storylyView.delegate = self
@@ -34,6 +35,14 @@ class IntegrationViewController: UIViewController {
     private func isSegueFound(withIdentifier id: String) -> Bool {
         guard let segues = self.value(forKey: "storyboardSegueTemplates") as? [NSObject] else { return false }
         return segues.first { $0.value(forKey: "identifier") as? String == id } != nil
+    }
+    
+    @objc private func openDeepLinkStoryItem(notification: Notification) {
+        StorylyConfiguration.shared.onStoryNotificationHandle(notification: notification) { [unowned self] groupId, storyId in
+            DispatchQueue.main.async {
+                _ = self.storylyView.openStory(storyGroupId: groupId, storyId: storyId, play: .Story)
+            }
+        }
     }
 }
 

@@ -46,17 +46,13 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
-  - SDWebImage (5.10.0):
-    - SDWebImage/Core (= 5.10.0)
-  - SDWebImage/Core (5.10.0)
-  - Storyly (1.17.0):
-    - SDWebImage (= 5.10.0)
+  - Storyly (1.26.2)
   - StorylyMonetization (1.1.0):
     - Google-Mobile-Ads-SDK (~> 8.7)
     - Storyly (~> 1.15)
 
 DEPENDENCIES:
-  - Storyly
+  - Storyly (= 1.26.2)
   - StorylyMonetization
 
 SPEC REPOS:
@@ -67,7 +63,6 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
-    - SDWebImage
     - Storyly
     - StorylyMonetization
 
@@ -78,10 +73,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 684ee790a24f73ebb2d1d966e9711c203f2a4237
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
-  Storyly: 72403fa005da36885f608d90231116a0b8b80779
+  Storyly: 9f7694d816cbe22d1d5604b7653e75feabf1915f
   StorylyMonetization: 14d1d09053fae0de45e3fd8a8678f3e4c1bce1a9
 
-PODFILE CHECKSUM: 9b615e4779bf4a17a0b8b435a997482a75b5e18a
+PODFILE CHECKSUM: 15f133ace31e118fcdcfc4480d783e118d068604
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.3

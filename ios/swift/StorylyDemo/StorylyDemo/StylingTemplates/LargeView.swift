@@ -69,7 +69,7 @@ public class LargeView: StoryGroupView {
             self.groupIcon.borderColor = [UIColor.clear, UIColor.clear]
             self.vodIcon.isHidden = true
             self.pinIcon.isHidden = true
-            self.groupIcon.sd_cancelCurrentImageLoad()
+//            self.groupIcon.sd_cancelCurrentImageLoad()
         }
     }
     

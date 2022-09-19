@@ -70,10 +70,10 @@ class UIRoundImageView: UIView {
     
     internal func setImage(iconUrl: URL, contentMode: ContentMode = .scaleToFill, completion: (() -> Void)? = nil) {
         self.imageView.contentMode = contentMode
-        self.imageView.sd_setImage(with: iconUrl) { [weak self] image, error, type, url in
-            self?.backgroundColor = .clear
-            completion?()
-        }
+//        self.imageView.sd_setImage(with: iconUrl) { [weak self] image, error, type, url in
+//            self?.backgroundColor = .clear
+//            completion?()
+//        }
     }
     
     internal func setImage(image: UIImage, contentMode: ContentMode = .scaleToFill) {
@@ -82,7 +82,7 @@ class UIRoundImageView: UIView {
     }
     
     internal func cancelImageRequest() {
-        self.imageView.sd_cancelCurrentImageLoad()
+//        self.imageView.sd_cancelCurrentImageLoad()
         self.imageView.layer.removeAllAnimations()
         self.imageView.image = nil
     }
