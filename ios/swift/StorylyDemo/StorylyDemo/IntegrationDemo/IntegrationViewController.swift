@@ -41,6 +41,8 @@ class IntegrationViewController: UIViewController {
         StorylyConfiguration.shared.onStoryNotificationHandle(notification: notification) { [unowned self] groupId, storyId in
             DispatchQueue.main.async {
                 _ = self.storylyView.openStory(storyGroupId: groupId, storyId: storyId, play: .Story)
+                StorylyConfiguration.shared.groupId = nil
+                StorylyConfiguration.shared.storyId = nil
             }
         }
     }
@@ -49,6 +51,11 @@ class IntegrationViewController: UIViewController {
 extension IntegrationViewController: StorylyDelegate {
     func storylyLoaded(_ storylyView: StorylyView, storyGroupList: [StoryGroup], dataSource: StorylyDataSource) {
         print("[storyly] IntegrationViewController:storylyLoaded - storyGroupList size {\(storyGroupList.count)} - source {\(dataSource)}")
+        if let groupId = StorylyConfiguration.shared.groupId, let storyId = StorylyConfiguration.shared.storyId {
+            _ = storylyView.openStory(storyGroupId: groupId, storyId: storyId, play: .Story)
+            StorylyConfiguration.shared.groupId = nil
+            StorylyConfiguration.shared.storyId = nil
+        }
     }
     
     func storylyLoadFailed(_ storylyView: StorylyView, errorMessage: String) {

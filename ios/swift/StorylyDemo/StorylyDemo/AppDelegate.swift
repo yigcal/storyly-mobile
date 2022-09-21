@@ -34,9 +34,12 @@ enum StorylyConstans {
 final class StorylyConfiguration {
     static let shared = StorylyConfiguration()
     
+    var groupId: String?
+    var storyId: String?
+    
     func onStoryUrlDeepLinkHandle(_ url: URL) {
-        let groupId = url.valueOf(StorylyConstans.groupUrlKey)
-        let storyId = url.valueOf(StorylyConstans.storyUrlKey)
+        groupId = url.valueOf(StorylyConstans.groupUrlKey)
+        storyId = url.valueOf(StorylyConstans.storyUrlKey)
         let object = [StorylyConstans.groupUrlKey: groupId, StorylyConstans.storyUrlKey: storyId]
         
         NotificationCenter.default.post(name: .OpenStorylyItem, object: object)
