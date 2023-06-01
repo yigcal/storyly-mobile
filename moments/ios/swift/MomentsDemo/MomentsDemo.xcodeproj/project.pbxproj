@@ -12,6 +12,8 @@
 		3048543828DB2453005EC00C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3048543628DB2453005EC00C /* Main.storyboard */; };
 		3048543A28DB2454005EC00C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3048543928DB2454005EC00C /* Assets.xcassets */; };
 		3048543D28DB2454005EC00C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3048543B28DB2454005EC00C /* LaunchScreen.storyboard */; };
+		3099E51B2A01B6AE00E2225A /* CreatorConsumerTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099E51A2A01B6AE00E2225A /* CreatorConsumerTagsViewController.swift */; };
+		3099E5232A03A7EF00E2225A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099E5222A03A7EF00E2225A /* UIColor+Extension.swift */; };
 		ADF7FC4B7536F4DAF09DB4F8 /* Pods_MomentsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C811DCFA7AD6C3332DAC3376 /* Pods_MomentsDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		3048543928DB2454005EC00C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3048543C28DB2454005EC00C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3048543E28DB2454005EC00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3099E51A2A01B6AE00E2225A /* CreatorConsumerTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorConsumerTagsViewController.swift; sourceTree = "<group>"; };
+		3099E5222A03A7EF00E2225A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3A2710BB6B9DEAAEC146BA00 /* Pods-MomentsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsDemo.release.xcconfig"; path = "Target Support Files/Pods-MomentsDemo/Pods-MomentsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C811DCFA7AD6C3332DAC3376 /* Pods_MomentsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MomentsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,6 +65,8 @@
 		3048542F28DB2453005EC00C /* MomentsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3099E5212A03A7DC00E2225A /* UI */,
+				3099E5192A01B68100E2225A /* CreatorConsumerTags */,
 				3048543028DB2453005EC00C /* AppDelegate.swift */,
 				3048543428DB2453005EC00C /* ViewController.swift */,
 				3048543628DB2453005EC00C /* Main.storyboard */,
@@ -69,6 +75,22 @@
 				3048543E28DB2454005EC00C /* Info.plist */,
 			);
 			path = MomentsDemo;
+			sourceTree = "<group>";
+		};
+		3099E5192A01B68100E2225A /* CreatorConsumerTags */ = {
+			isa = PBXGroup;
+			children = (
+				3099E51A2A01B6AE00E2225A /* CreatorConsumerTagsViewController.swift */,
+			);
+			path = CreatorConsumerTags;
+			sourceTree = "<group>";
+		};
+		3099E5212A03A7DC00E2225A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3099E5222A03A7EF00E2225A /* UIColor+Extension.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		36AEE68AEDB06FBECD570C11 /* Frameworks */ = {
@@ -203,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3099E51B2A01B6AE00E2225A /* CreatorConsumerTagsViewController.swift in Sources */,
 				3048543528DB2453005EC00C /* ViewController.swift in Sources */,
 				3048543128DB2453005EC00C /* AppDelegate.swift in Sources */,
+				3099E5232A03A7EF00E2225A /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +378,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MomentsDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Demo app will use Camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Demo app will use Microphone";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Demo app will use Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -383,6 +410,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MomentsDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Demo app will use Camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Demo app will use Microphone";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Demo app will use Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
