@@ -48,25 +48,25 @@ public class GradientPortraitView: StoryGroupView {
     public override func populateView(storyGroup: StoryGroup?) {
         if let storyGroup = storyGroup {
             self.groupTitle.text = storyGroup.title
-            self.groupIcon.setImage(iconUrl: storyGroup.iconUrl, contentMode: .scaleAspectFill)
-            self.backgroundStory.setImage(iconUrl: storyGroup.iconUrl, contentMode: .scaleAspectFill) {
-                self.pinIcon.isHidden = storyGroup.pinned ? false : true
-                self.vodIcon.isHidden = storyGroup.type == .IVod ? false : true
+            if let iconUrl = storyGroup.iconUrl {
+                self.groupIcon.setImage(iconUrl: iconUrl, contentMode: .scaleAspectFill)
+                self.backgroundStory.setImage(iconUrl: iconUrl, contentMode: .scaleAspectFill) {
+                    self.pinIcon.isHidden = storyGroup.pinned ? false : true
 
-                self.groupIcon.borderColor =  storyGroup.seen ? [UIColor(red: 0.86, green: 0.86, blue: 0.86, alpha: 1),
-                                                                 UIColor(red: 0.86, green: 0.86, blue: 0.86, alpha: 1)] : [UIColor(red: 1.00, green: 0.82, blue: 0.41, alpha: 1.0),
-                                                                                                                           UIColor(red: 0.98, green: 0.49, blue: 0.13, alpha: 1.0),
-                                                                                                                           UIColor(red: 0.79, green: 0.16, blue: 0.48, alpha: 1.0),
-                                                                                                                           UIColor(red: 0.59, green: 0.18, blue: 0.76, alpha: 1.0)]
+                    self.groupIcon.borderColor =  storyGroup.seen ? [UIColor(red: 0.86, green: 0.86, blue: 0.86, alpha: 1),
+                                                                     UIColor(red: 0.86, green: 0.86, blue: 0.86, alpha: 1)] : [UIColor(red: 1.00, green: 0.82, blue: 0.41, alpha: 1.0),
+                                                                                                                               UIColor(red: 0.98, green: 0.49, blue: 0.13, alpha: 1.0),
+                                                                                                                               UIColor(red: 0.79, green: 0.16, blue: 0.48, alpha: 1.0),
+                                                                                                                               UIColor(red: 0.59, green: 0.18, blue: 0.76, alpha: 1.0)]
+                }
             }
-        
         } else {
             self.groupTitle.text = ""
             self.groupIcon.borderColor = [UIColor.clear, UIColor.clear]
             self.vodIcon.isHidden = true
             self.pinIcon.isHidden = true
-            self.groupIcon.sd_cancelCurrentImageLoad()
-            self.backgroundStory.sd_cancelCurrentImageLoad()
+            self.groupIcon.st_cancelCurrentImageLoad()
+            self.backgroundStory.st_cancelCurrentImageLoad()
         }
     }
     
