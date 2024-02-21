@@ -1,3 +1,3 @@
 package com.appsamurai.storylydemo
 
-const val STORYLY_INSTANCE_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfaWQiOjIzODAsImFwcF9pZCI6MTcxODUsImluc19pZCI6MTkxMDB9.AmtkzTlj_g3RQwwHZTz6rsozH8VFqAogeSwgBdXLMDU"
+const val STORYLY_INSTANCE_TOKEN = "YOUR_TOKEN"
