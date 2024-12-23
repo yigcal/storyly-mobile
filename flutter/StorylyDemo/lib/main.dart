@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:storyly_demo/constants.dart';
+import 'package:storyly_demo/dummy_page.dart';
 import 'package:storyly_demo/multi_screen_example.dart';
 import 'package:storyly_flutter/storyly_flutter.dart';
 
@@ -68,8 +69,16 @@ class _HomePageState extends State<HomePage> {
                 },
                 storylyLoadFailed: (errorMessage) =>
                     debugPrint("storylyLoadFailed: $errorMessage"),
-                storylyActionClicked: (story) {
+                storylyActionClicked: (story) async {
                   debugPrint("storylyActionClicked -> ${story.title}");
+                  storylyViewController.pauseStory();
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DummyPage(),
+                    ),
+                  );
+                  storylyViewController.resumeStory();
                 },
                 storylyEvent: (event, storyGroup, story, storyComponent) {
                   debugPrint("storylyEvent -> event: $event");
@@ -93,29 +102,7 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               ),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ScrollExample(),
-                  ),
-                );
-              },
-              child: const Text("Scroll Example"),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MultiScreenExample(),
-                  ),
-                );
-              },
-              child: const Text("Multi-Screen Example"),
-            ),
+            )
           ],
         ),
       ),
