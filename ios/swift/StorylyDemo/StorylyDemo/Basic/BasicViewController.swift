@@ -10,6 +10,7 @@ import MediaPlayer
 
 class BasicViewController: UIViewController {
     
+    private let STORYLY_INSTANCE_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfaWQiOjIzODAsImFwcF9pZCI6MjEwNzksImluc19pZCI6MjQ3NTN9.fYweIJyC41qlv102dWPIavSAD7LefjOkqwPThkGcgL4"
     private var audioPlayer: AVAudioPlayer?
     private var currentTrack = 0
     private let trackMap = [

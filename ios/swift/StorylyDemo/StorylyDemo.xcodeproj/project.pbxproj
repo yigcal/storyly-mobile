@@ -10,7 +10,6 @@
 		3486711D2E25476600936E0A /* times.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3486711B2E25476600936E0A /* times.mp3 */; };
 		3486711E2E25476600936E0A /* identify.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3486711A2E25476600936E0A /* identify.mp3 */; };
 		3486711F2E25476600936E0A /* wall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3486711C2E25476600936E0A /* wall.mp3 */; };
-		4127AA3126B0A5E4004CDE30 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127AA3026B0A5E4004CDE30 /* Tokens.swift */; };
 		55877413334714A6655C77B9 /* libPods-StorylyDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA7E5C6A0A9EE8AA69E514 /* libPods-StorylyDemo.a */; };
 		A16DA837233B90E3000514FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DA836233B90E3000514FA /* AppDelegate.swift */; };
 		A16DA83B233B90E3000514FA /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DA83A233B90E3000514FA /* BasicViewController.swift */; };
@@ -25,7 +24,6 @@
 		3486711B2E25476600936E0A /* times.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = times.mp3; sourceTree = "<group>"; };
 		3486711C2E25476600936E0A /* wall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wall.mp3; sourceTree = "<group>"; };
 		3CB5F4E3423BEB3D0BA0629B /* Pods-StorylyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorylyDemo.debug.xcconfig"; path = "Target Support Files/Pods-StorylyDemo/Pods-StorylyDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		4127AA3026B0A5E4004CDE30 /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
 		8796B38706767D0054280E24 /* Pods-StorylyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorylyDemo.release.xcconfig"; path = "Target Support Files/Pods-StorylyDemo/Pods-StorylyDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A16DA833233B90E3000514FA /* StorylyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorylyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16DA836233B90E3000514FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				3486711C2E25476600936E0A /* wall.mp3 */,
 				A16DA841233B90E5000514FA /* LaunchScreen.storyboard */,
 				A16DA844233B90E5000514FA /* Info.plist */,
-				4127AA3026B0A5E4004CDE30 /* Tokens.swift */,
 			);
 			path = StorylyDemo;
 			sourceTree = "<group>";
@@ -233,7 +230,6 @@
 			files = (
 				A16DA83B233B90E3000514FA /* BasicViewController.swift in Sources */,
 				A16DA837233B90E3000514FA /* AppDelegate.swift in Sources */,
-				4127AA3126B0A5E4004CDE30 /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
