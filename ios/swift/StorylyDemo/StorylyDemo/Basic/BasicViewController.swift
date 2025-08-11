@@ -108,16 +108,16 @@ extension BasicViewController {
     }
     
     func playAudio() {
-        if audioPlayer != nil {
-            audioPlayer?.play()
-            return
-        }
-        
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print("Audio session error: \(error)")
+        }
+        
+        if audioPlayer != nil {
+            audioPlayer?.play()
+            return
         }
         
         guard let url = Bundle.main.url(forResource: trackMap[currentTrack], withExtension: "mp3") else {
