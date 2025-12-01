@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.appsamurai.storylydemo"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
     }
@@ -37,5 +37,5 @@ dependencies {
 
     implementation "com.github.skydoves:colorpickerview:2.2.4"
 
-    implementation 'com.appsamurai.storyly:storyly:4.4.0'
+    implementation 'com.appsamurai.storyly:storyly:4.18.0'
 }
