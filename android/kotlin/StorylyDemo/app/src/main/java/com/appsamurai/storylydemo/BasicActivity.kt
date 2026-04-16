@@ -8,7 +8,6 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.net.toUri
@@ -41,13 +40,11 @@ class BasicActivity : AppCompatActivity() {
     private val activityResultListener = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
-        if (result.resultCode == Activity.RESULT_CANCELED) {
-            onAlarmPermissionGranted()
-        }
+        onAlarmPermissionResult()
         onFinishAlarmPermissionCheck()
     }
 
-    private fun onAlarmPermissionGranted() {
+    private fun onAlarmPermissionResult() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val canScheduleExactAlarms = alarmManager.canScheduleExactAlarms()
